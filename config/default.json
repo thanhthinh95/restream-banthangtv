@@ -2,7 +2,7 @@
     "mysql": {
         "host": "localhost",
         "username": "root",
-        "password": "bongda123",
+        "password": "facebook",
         "database": "bongda",
         "logging": false,
         "sync": false
