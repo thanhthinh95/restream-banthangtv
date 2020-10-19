@@ -1,0 +1,40 @@
+{
+  "name": "restream-banthangtv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "public/*"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/zorovhsvn/restream-banthangtv.git"
+  },
+  "author": "ZoroVHS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/zorovhsvn/restream-banthangtv/issues"
+  },
+  "homepage": "https://gitlab.com/zorovhsvn/restream-banthangtv#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "ejs": "^2.7.4",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "md5": "^2.2.1",
+    "mysql2": "^2.1.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
+    "rimraf": "^3.0.2",
+    "sequelize": "^5.21.7"
+  }
+}

@@ -1,0 +1,40 @@
+<% include header %>
+<div class="container-fluid">
+    <!-- Page-Title -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="page-title-box">
+                <div class="float-right">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="/link/">Danh Sách Link</a></li>
+                        <li class="breadcrumb-item active">Thêm Link</li>
+                    </ol>
+                </div>
+                <h4 class="page-title">Thêm Link</h4>
+            </div><!--end page-title-box-->
+        </div><!--end col-->
+    </div>
+    <!-- end page title end breadcrumb -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="mt-0 header-title">Thêm Link</h4>
+                    <form id="frmAction" action="/link/add/">
+                        <div class="form-group">
+                            <label for="url" class="col-form-label">Link</label>
+                            <input type="url" name="url" id="url" class="form-control" autocomplete="off" placeholder="https://banthang.tv/truc-tiep-bong-da/real-madriz-u20-managua-u20-lm1587792849.html" required>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="button" onclick="goBack()" class="btn btn-danger">Cancel</button>
+                        </div> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- container -->
+<% include footer %>

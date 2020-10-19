@@ -1,0 +1,44 @@
+<% include header %>
+<div class="container-fluid">
+    <!-- Page-Title -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="page-title-box">
+                <div class="float-right">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Video</li>
+                    </ol>
+                </div>
+                <h4 class="page-title">List Video</h4>
+            </div><!--end page-title-box-->
+        </div><!--end col-->
+    </div>
+    <!-- end page title end breadcrumb -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="mt-0 header-title">List Video</h4>
+                    <table id="datatable-ajax" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Link</th>
+                                <th>M3u8</th>
+                                <th>Host</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- container -->
+<script>
+var status = "<%=status%>";
+</script>
+<script src="/assets/js/datatables/video.js"></script>
+<% include footer %>
