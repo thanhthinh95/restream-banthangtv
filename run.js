@@ -56,7 +56,11 @@ async function run() {
         // }
 
         //thinh_dev
-        await getStream(m3u8, md5file);
+        let stream = await getStream(m3u8, md5file);
+        while (stream) {
+            await functions.sleep(1000);
+            stream = await getStream(m3u8, md5file);
+        }
     } else {
         //getlink m3u8 lỗi
         await Link.update({
@@ -174,11 +178,10 @@ const getStream = async (m3u8, md5file) => {
     try {
         let content = await get_content(m3u8).catch((err) => {
             console.error(err);
-            return null;
+            return false;
         });
 
         if (!content) {
-            console.log(`Done ${m3u8}`);
             await Link.update({
                 status: 2
             }, {
@@ -186,6 +189,7 @@ const getStream = async (m3u8, md5file) => {
                     md5file
                 }
             });
+            return false;
         } else {
             let array = content.toString().split(`\n`);
             for (let item of array) {
@@ -224,8 +228,7 @@ const getStream = async (m3u8, md5file) => {
                     }
                 });
             }
-
-            console.log(`Done ${m3u8}`);
+            return true;
         }
     } catch (e) {
         console.log(e);
